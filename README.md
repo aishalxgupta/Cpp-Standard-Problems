@@ -1,2 +1,2 @@
-# Cpp-Standard-Problems
+# C++ Standard-Problems
 Some Standard Basic problems in C++ for beginners
