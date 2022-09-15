@@ -43,14 +43,14 @@ void print(){
 
 // delete at nth position
 void delete1(int n){
-    node* temp2=head;
+    node* temp1=head;
     for (int i=0;i<n-2;i++){
-      temp2 =  temp2 -> next; 
-         }
+      temp1 =  temp1 -> next; 
+         } // temp1 points to n-1 node
 
-         node* temp1= temp2-> next;
-          temp2 -> next = temp1->next;
-          delete temp1;
+         node* temp2= temp1-> next; // nth node to be deleted
+          temp1 -> next = temp2->next;
+          delete temp2;
 
 
 }
