@@ -6,7 +6,7 @@ struct node{
     node* next;
 };
 
-struct node* head;
+struct node* head; // global variable
 
 
 
