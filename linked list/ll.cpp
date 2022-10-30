@@ -59,6 +59,32 @@ void reverse(){
     head=prev;
 }
 
+bool findLoop(struct node* h){
+    unordered_set<node*> s;
+
+    while(h){
+      
+
+        if (s.find(h)!=s.end()) return true;
+          s.insert(h);
+        h=h->next;
+    }
+    return false;
+}
+
+
+int countLoop(struct node *h){
+    struct node *temp=h;
+    res=1;
+
+    while(temp->next!=h){
+        res++;
+        temp=temp->next;
+    }
+    return res;
+}
+
+
 void removeDuplicates(){
 
     node *temp1= head;
@@ -92,6 +118,11 @@ cout<<endl;
 reverse();
 removeDuplicates();
 print();
+head->next->next->next->next = head;
+ if (findLoop(head))
+        cout << "Loop Found";
+    else
+        cout << "No Loop";
 
 
     return 0;
