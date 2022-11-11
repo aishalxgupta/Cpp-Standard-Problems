@@ -43,7 +43,7 @@ int main(){
         adj[v2].push_back(v1);
     }
 
-    bfs(1);
+    bfs(2);
 
     for (int i=1;i<=n;i++){
         cout<<i<<": "<<level[i]<<endl;
